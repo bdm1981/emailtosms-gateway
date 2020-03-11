@@ -1,0 +1,30 @@
+{
+  "name": "emailtosms-gateway",
+  "version": "1.0.0",
+  "description": "Twilio Email to SMS gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdm1981/emailtosms-gateway.git"
+  },
+  "keywords": [
+    "twilio",
+    "sms",
+    "email",
+    "lambda",
+    "serverless"
+  ],
+  "author": "Brad McAllister",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bdm1981/emailtosms-gateway/issues"
+  },
+  "homepage": "https://github.com/bdm1981/emailtosms-gateway#readme",
+  "dependencies": {
+    "lambda-multipart-parser": "0.0.2",
+    "twilio": "^3.40.0"
+  }
+}
