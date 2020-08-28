@@ -41,11 +41,17 @@ exports.handler = async event => {
     let to = data.to.match(regexp)[0];
     let body = `Subject: ${data.subject}\nMessage: ${data.text}`;
 
-    let message = await client.messages.create({
-      body: body,
-      from: process.env.FROM,
-      to: to
-    });
+    let message;
+    
+    try {
+      message = await client.messages.create({
+        body: body,
+        from: process.env.FROM,
+        to: to
+      });
+    } catch(err) {
+      console.log(err)
+    }
 
     console.log("Message Output: ", message);
     const response = {
